@@ -8,7 +8,7 @@ on:
 
 jobs: 
   test:
-      name: Publish from Dev
+      name: Run test before commit
       runs-on: ubuntu-latest
       
       steps:
