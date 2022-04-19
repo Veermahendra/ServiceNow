@@ -1,0 +1,24 @@
+name: ServiceNow GitHub Actions Demo
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs: 
+  test:
+      name: Publish from Dev
+      runs-on: ubuntu-latest
+      
+      steps:
+        - name: ServiceNow CI/CD Run ATF Test Suite
+          uses: ServiceNow/sncicd-tests-run@1.0.0
+          with:
+            testSuiteSysId: ${{ secrets.SN_ATFTESTSUITE_SYSID }}
+          env:
+            nowUsername: ${{ secrets.SN_USERNAME }}
+            nowPassword: ${{ secrets.SN_PASSWORD }}
+            nowInstallInstance: ${{ secrets.SN_TEST_INSTANCE }}
+
+      
