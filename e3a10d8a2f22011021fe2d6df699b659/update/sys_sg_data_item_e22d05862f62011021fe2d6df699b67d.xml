@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_data_item">
+    <sys_sg_data_item action="INSERT_OR_UPDATE">
+        <condition_type>declarative</condition_type>
+        <description/>
+        <group_by/>
+        <instance_relative_url_qc/>
+        <name>Data Item For List Of Incidents</name>
+        <offline_query_condition/>
+        <offline_query_condition_script/>
+        <query_condition table="incident">active=true^state={{State}}^ORDERBYDESCsys_created_on<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item display_value="{{State}}" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="{{State}}"/>
+            <item endquery="false" field="" goto="false" newquery="false" operator="ORDERBYDESC" or="false" value="sys_created_on"/>
+        </query_condition>
+        <query_condition_script/>
+        <sys_class_name>sys_sg_data_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-31 13:05:02</sys_created_on>
+        <sys_id>e22d05862f62011021fe2d6df699b67d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Data Item For List Of Incidents</sys_name>
+        <sys_package display_value="VM_Mobile" source="x_382937_vm_mobile">e3a10d8a2f22011021fe2d6df699b659</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VM_Mobile">e3a10d8a2f22011021fe2d6df699b659</sys_scope>
+        <sys_update_name>sys_sg_data_item_e22d05862f62011021fe2d6df699b67d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-31 13:06:18</sys_updated_on>
+        <table>incident</table>
+    </sys_sg_data_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=e22d05862f62011021fe2d6df699b67d"/>
+</record_update>
